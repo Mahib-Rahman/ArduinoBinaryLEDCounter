@@ -12,28 +12,21 @@ int third = 8;
 int fourth = 7;
 
 void handelLight(int num) {
-  while(num != 0)
-  {
-    if(num % 2 == 1)
-    {
-      digitalWrite(fourth, HIGH);
-      num--;
-    }
-    if(num >= 8)
-    {
-      digitalWrite(first, HIGH);
-      num -= 8;
-    }
-    if(num >= 4)
-    {
-      digitalWrite(second, HIGH);
-      num -= 4;
-    }
-    if(num >= 2)
-    {
-      digitalWrite(third, HIGH);
-      num -= 2;
-    }
+  if(num % 2 == 1) {
+    digitalWrite(fourth, HIGH);
+    num--;
+  }
+  if(num >= 8) {
+    digitalWrite(first, HIGH);
+    num -= 8;
+  }
+  if(num >= 4) {
+    digitalWrite(second, HIGH);
+    num -= 4;
+  }
+  if(num >= 2) {
+    digitalWrite(third, HIGH);
+    num -= 2;
   }
 }
 
